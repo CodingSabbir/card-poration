@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Items</title>
+   <link rel="stylesheet" href="./main.css">
+</head>
+<body class="bg-gray-100">
+<div class="container  px-8 py-4">
+   <div class="flex gap-10">
+    <h1 class="text-3xl font-bold mb-8">Food Items </h1>
+
+    <span>
+       </svg></button>
+        <button class="open"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            class="h-6 w-6 inline-block">
+           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                 d="M4 2v2m2-2v2m2-2v2m2-2v2m2-2v2m2-2v2m2-2v2m6 14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v10z"></path>
+       </svg> <sup class="bg-red-600 rounded-full text-white px-2  text-[16px] count">0</sup></button>
+    </span>
+   </div>
+
+    <div id="food-items" class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[70%]">
+      
+        <div class="bg-gray-200 p-4 rounded-md shadow-md">
+            <img id="food-img" src="./img/pizza.png" alt="Food Image" class="w-full h-40 object-cover rounded-md mt-2 ">
+            <h2 class="text-lg font-semibold mb-2">Pizza</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, minima?</p>
+            <p class="text-gray-600 font-semibold font-mono mb-2">$10.00</p>
+            <button class="bg-red-500 text-white px-4 py-2 w-full focus:outline-none add-to-cart-btn"
+                    data-id="1" data-name="Pizza"  data-price="10.00" data-image="./img/pizza.png">Add to Order</button>
+                    <button class="text-center border border-red-600 mt-2 p-1 w-full">Customize</button>
+                    
+        </div>
+        <div class="bg-gray-200 p-4 rounded-md shadow-md">
+            <img id="food-img" src="./img/burger1.png" alt="Food Image" class="w-full h-40 object-cover rounded-md mt-2 ">
+            <h2 class="text-lg font-semibold mb-2">Burger</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, minima?</p>
+            <p class="text-gray-600 font-semibold font-mono mb-2">$12.25</p>
+            <button class="bg-red-500 text-white px-4 py-2 w-full focus:outline-none add-to-cart-btn"
+                    data-id="2" data-name="Burger" data-price="12.25" data-image="./img/burger1.png">Add to Order</button>
+                    <button class="text-center border border-red-600 mt-2 p-1 w-full">Customize</button>
+        </div>
+        <div class="bg-gray-200 p-4 rounded-md shadow-md">
+            <img id="food-img" src="./img/salad1.png" alt="Food Image" class="w-full h-40 object-cover rounded-md mt-2 ">
+            <h2 class="text-lg font-semibold mb-2">Salad</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, minima?</p>
+            <p class="text-gray-600 font-semibold font-mono mb-2">$8.60</p>
+            <button class="bg-red-500 text-white px-4 py-2 w-full focus:outline-none add-to-cart-btn"
+                    data-id="3" data-name="Salad"  data-price="8.60" data-image="./img/salad1.png">Add to Order</button>
+                    <button class="text-center border border-red-600 mt-2 p-1 w-full">Customize</button>
+        </div> 
+    </div>
+
+    <div id="cart" class="fixed top-0 right-0 bg-red-400 p-4 w-1/3 h-full overflow-y-auto shadow-md transform translate-x-full transition-transform duration 300 ease-in-out">
+        <div class="flex justify-between gap-5">
+            <h1 id="Quantity" class="font-mono text-[20px] text-white"></h1>
+            <button id="close-cart-btn" class="border text-white px-4 py-1 rounded-sm focus:outline-none">Close</button>
+        </div>
+        <ul id="cart-list" class="mb-4">
+        </ul>
+        <p class="text-lg font-semibold font-mono text-white mb-2">Total: $<span id="cart-total">0.00</span></p>
+    </div>  
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
